@@ -50,6 +50,7 @@ User.init(
 
 router.get('/:id', (req, res) => {
   User.findOne({
+    attributes: { exclude: ['password'] },
     where: {
       id: req.params.id
     }
@@ -67,7 +68,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
-router.post('/', (req, res) => {
+routnpmer.post('/', (req, res) => {
  
   User.create({
     username: req.body.username,
