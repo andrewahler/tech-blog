@@ -1,7 +1,10 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-User.findAll({
+
+
+router.get('/', (req, res) => {
+  User.findAll({
     attributes: { exclude: ['password'] }
   })
     .then(dbUserData => res.json(dbUserData))
@@ -9,8 +12,7 @@ User.findAll({
       console.log(err);
       res.status(500).json(err);
     });
-
-router.get('/', (req, res) => {});
+});
 
 
 router.get('/:id', (req, res) => {});
