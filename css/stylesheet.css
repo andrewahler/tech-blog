@@ -1,0 +1,14 @@
+ :root {
+   --primary: green;
+   font-size: 12px;
+   margin: 0;
+   padding: 0px
+ }
+ h2 {
+    color: black;
+    padding: 75px
+ }
+ label {
+   color: black;
+   padding: 75px
+ }
